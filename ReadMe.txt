@@ -8,10 +8,12 @@ Installation
 ---------------
 The console expects a JNDI datasource 'MySqlDS' pointing to the 'tree' table of the albero database.
 
+To generate the ear file type 'mvn install' on the command line (supposing you have maven installed). Deploy the ear file on your application server.
+
 ---------------
 Usage
 ---------------
-To generate the ear file type 'mvn install' on the command line (supposing you have maven installed). Deploy the ear file on your application server.
+The management console will be deployed to http://<yourservername>/albero/managementconsole. You can add, edit and delete trees from there.
 	
 ---------------
 License
