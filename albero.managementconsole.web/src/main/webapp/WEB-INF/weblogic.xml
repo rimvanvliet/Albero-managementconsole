@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-web-app>
+	<security-role-assignment>
+		<role-name>albero_tree_admin</role-name>
+		<principal-name>dzs_hbh_functioneelbeheer</principal-name>
+	</security-role-assignment>
+
+	<container-descriptor>
+		<relogin-enabled>false</relogin-enabled>
+		<prefer-web-inf-classes>true</prefer-web-inf-classes>
+	</container-descriptor>
+
+	<session-descriptor>
+		<cookie-path>/dzs/wmoalberomanagementconsole
+		</cookie-path>
+	</session-descriptor>
+
+</weblogic-web-app>

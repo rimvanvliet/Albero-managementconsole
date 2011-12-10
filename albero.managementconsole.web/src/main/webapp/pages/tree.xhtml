@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+	<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:ui="http://java.sun.com/jsf/facelets"
+		template="/templates/main.xhtml">
+	
+		<ui:define name="content">
+			<div class="content" id="content">
+				<h1>#{treeManagedBean.tree.code}</h1>
+								
+				<h:form>
+					<div class="inputArea">
+						<div class="code">
+							<h:outputLabel rendered="#{!treeManagedBean.codeGevuld}" for="codeInputText">code</h:outputLabel>
+				 			<h:inputText required="true" rendered="#{!treeManagedBean.codeGevuld}" id="codeInputText" value="#{treeManagedBean.tree.code}"/>
+				 			<h:message for="codeInputText" showDetail="true" showSummary="false" class="codeInputError" />
+						</div>
+						<div class="tree">
+							<h:outputLabel for="treeInputTextarea">tree</h:outputLabel>
+				 			<h:inputTextarea id="treeInputTextarea" value="#{treeManagedBean.tree.tree}"/>
+			 			</div>
+		 			</div>
+		 			<div class="update">
+			        	<h:commandButton rendered="#{treeManagedBean.codeGevuld}" action="#{treeManagedBean.updateTree}"
+			        	 value="#{res['tree.update']}" />
+		        	</div>
+		        	<div class="create">
+			        	<h:commandButton id="treeCreat" rendered="#{treeManagedBean.codeLeeg}" action="#{treeManagedBean.createTree}"
+				        	value="#{res['tree.create']}" />
+			 			<h:message for="treeCreat" showDetail="false" showSummary="true" class="codeInputError" />
+		        	</div>
+					<div class="cancel">
+			        	<h:outputLink value="#{request.contextPath}/">
+				        	<h:outputText value="#{res['tree.cancel']}" />
+			        	</h:outputLink>
+			        </div>	
+				</h:form>
+			</div>        	
+        </ui:define>
+	</ui:composition>
+</html>

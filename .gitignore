@@ -1,0 +1,7 @@
+.classpath
+.project
+.settings
+.gradle
+build
+.idea/
+albero_managementcosole.iml

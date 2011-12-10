@@ -1,0 +1,994 @@
+/* ===================================== */
+/* Standaard HTML elementen stylen */
+/* ===================================== */
+
+body {
+    overflow-x: auto;
+    background-color: #e6e6e6;
+    color: black;
+    padding: 0;
+    margin: 15px auto 0 auto;
+    text-align: center;
+    overflow: -moz-scrollbars-vertical; /* Altijd scrollbar tonen in Firefox */
+}
+
+body, p, td, th, li, div, input, option, select, textarea, a, dt, dd, h1, h2, h3, h4, button, label {
+    color: black;
+    font-family: "Lucida Grande", Geneva, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+p {
+    margin: 0 0 1em 0;
+    padding: 0;
+}
+
+/* Links ook tonen als links (met onderlijn). */
+a, a:hover, a:visited {
+    color: #307630; /* Profict groen */
+    outline: 0;
+    text-decoration: underline;
+}
+
+a img {
+    border: 0;
+}
+
+h1 {
+    text-align: left;
+    font-size: 56px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #307630; /* Profict groen */
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 22px;
+    display: block;
+    color: #307630; /* Profict groen */
+    margin: 0 0 20px 0;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 20px 0 10px 0;
+    margin: 0;
+}
+
+fieldset h3 {
+    padding-top: 0;
+}
+
+h4 {
+    font-weight: bold;
+    padding: 10px 0 5px 0;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 2em 0 1em;
+}
+
+li {
+    padding: 0;
+    margin: 0 0 0 1.5em;
+}
+
+header {
+    display: block;
+    margin: 0 auto 15px auto;
+    text-align: left;
+    width: 1000px;
+    height: 133px;
+    padding: 10px 25px;
+    background-color: white;
+
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 1px 1px 6px rgba(0, 0, 0, .3);
+    -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, .3);
+
+    background-repeat: no-repeat;
+    background-position: 100px 60px;
+    background-image: url(#{resource[ 'images:swooshwhite.png' ]} );
+}
+
+nav {
+    display: block;
+    width: 1000px;
+    margin: 0 auto 15px auto;
+
+    text-align: left;
+    padding: 10px 25px;
+    background-color: white;
+
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 1px 1px 6px rgba(0, 0, 0, .3);
+    -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, .3);
+}
+
+/* Om Section en Aside te centreren met samen een max breedte. */
+#main {
+    display: block;
+    width: 1050px;
+    margin: 0 auto 15px auto;
+}
+
+section {
+    display: block;
+    width: 700px;
+
+    text-align: left;
+    padding: 25px;
+    padding-right: 325px;
+    min-height: 400px;
+    background-color: white;
+
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 1px 1px 6px rgba(0, 0, 0, .3);
+    -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, .3);
+}
+
+aside {
+    display: block;
+    width: 200px;
+    float: right;
+    text-align: left;
+    margin: 25px;
+    margin-top: 65px;
+}
+
+footer {
+    display: block;
+    width: 1000px;
+    text-align: center;
+    clear: both;
+    margin: 0 auto;
+    padding: 0 25px 15px 25px;
+    color: gray;
+}
+
+hr {
+    margin-top: 15px;
+    height: 0;
+    border: 0;
+}
+
+strong {
+    color: black;
+    font-weight: bold;
+}
+
+.strong {
+    color: black;
+    font-weight: bold;
+}
+
+.stronger {
+    color: black;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+/* ===================================== */
+/* Custom divs stylen */
+/* ===================================== */
+
+#user {
+    float: right;
+}
+
+#logo {
+    display: block;
+    float: left;
+    background-image: url(#{resource[ 'images:profict_logo.jpg' ]} );
+    width: 177px;
+    height: 133px;
+    font-size: 0;
+}
+
+header h1 {
+    color: #232 !important;
+    margin-left: 235px;
+    margin-top: 51px;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9)
+}
+
+/* ===================================== */
+/* Breadcrumb. */
+/* ===================================== */
+
+#breadcrumb {
+    display: block;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+#breadcrumb li {
+    display: inline;
+    list-style: none;
+    padding: 0 16px 0 0;
+    margin: 0 2px 0 0;
+    background: url(#{resource[ 'images:gt.gif' ]} ) no-repeat right center;
+}
+
+#breadcrumb a {
+    background: none;
+}
+
+#breadcrumb .last {
+    background: none;
+}
+
+/* ===================================== */
+/* Het menu */
+/* ===================================== */
+
+nav ul {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    list-style-type: none;
+    display: inline;
+}
+
+nav ul > li {
+    display: inline;
+    cursor: pointer;
+    margin: 0 2em 0 0;
+    padding: 0;
+}
+
+/* ===================================== */
+/* Formulieren */
+/* ===================================== */
+
+form {
+    margin: 0;
+}
+
+fieldset {
+    display: block;
+    border: 0;
+    padding: 0;
+    margin: 15px 0;
+}
+
+label {
+    font-weight: bolder;
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    color: #4c4c4c;
+}
+
+/* readonly waarde in een form */
+.value {
+    color: black;
+    font-weight: normal;
+    line-height: 18px;
+}
+
+/* Label naast element kunnen zetten */
+.checkboxgroup {
+    margin-top: 5px;
+}
+
+.checkboxgroup label {
+    display: inline;
+    margin: auto;
+}
+
+.radiogroup {
+    margin-top: 5px;
+}
+
+.radiogroup label {
+    display: inline;
+    margin: auto;
+    font-weight: normal;
+    color: black;
+}
+
+/* Tabel wordt gebruik tbv opmaak JSF radiobuttons, opmaak ongedaan maken. */
+table.radiogroup {
+    border: 0;
+}
+
+table.radiogroup td {
+    border: 0;
+}
+
+table.radiogroup tbody {
+    border: 0;
+}
+
+table.radiogroup tr:hover {
+    background-color: transparent;
+}
+
+/* Lable naast checkbox, struts2 style */
+
+/* Labels links naast de tekstvelden */
+.horizontallabel label {
+    display: inline-block;
+    width: 200px;
+    line-height: 18px;
+    text-align: right;
+    margin-right: .5em;
+}
+
+.horizontallabel label:after {
+    content: ':';
+}
+
+.horizontal-label-and-field-40-width {
+    width: 649px;
+}
+
+.hide {
+    display: none;
+}
+
+/* Styling voor textboxen */
+.invoer-veld {
+    color: black;
+    margin: 2px 0;
+}
+
+.invoer-veld-5 {
+    width: 5em;
+    min-width: 0 !important;
+}
+
+.invoer-veld-6 {
+    width: 6em;
+    min-width: 0 !important;
+}
+
+.invoer-veld-10 {
+    width: 10em;
+    min-width: 0 !important;
+}
+
+.invoer-veld-20 {
+    width: 20em;
+    min-width: 0 !important;
+}
+
+.invoer-veld-15 {
+    width: 15em;
+    min-width: 0 !important;
+}
+
+.invoer-veld-30 {
+    width: 30em;
+    min-width: 0 !important;
+}
+
+.invoer-veld-35 {
+    width: 35em;
+    min-width: 0 !important;
+}
+
+.invoer-veld-40 {
+    width: 40em;
+    min-width: 0 !important;
+}
+
+.select-veld-25 {
+    min-width: 25em;
+}
+
+ul .grouped {
+    margin: 5px 0 5px 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* widgets groeperen naast elkaar. */
+.grouped > div {
+    display: inline-block;
+    margin: 0;
+    padding: 0 10px 0 0;
+}
+
+/* Een link (link terug naar vorige pagina) naast een button kunnen zetten. */
+.buttongroup {
+    margin-top: 20px;
+    clear: both;
+}
+
+.buttongroup .button {
+    margin-top: 0;
+    margin-right: 10px;
+}
+
+/* Knoppen onder elkaar. */
+.verticalbuttongroup {
+    margin-top: 20px;
+}
+
+.verticalbuttongroup input.button, .verticalbuttongroup a.button {
+    display: block;
+    margin-top: 0;
+}
+
+/* Toon readonly tekstveld niet als tekstveld */
+input.readonly {
+    color: #011f8f;
+    font-weight: normal;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #ddd;
+    background-color: transparent;
+}
+
+select {
+}
+
+select option {
+}
+
+/* Uitleg verwachte inhoud van een veld. */
+.fielddescription {
+    color: #666;
+    font-size: 10px;
+}
+
+/* Tonen errormelding(en) bovenaan pagina. */
+.messages {
+    padding: 0;
+    margin: 0 0 2em 0;
+    font-weight: bold;
+
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    display: inline-block;
+}
+
+.messages ul {
+    margin: 0;
+    padding: 0;
+}
+
+.messages li {
+    margin: 0;
+    padding: 5px 10px;
+    display: block;
+    text-align: left;
+    list-style-type: none;
+}
+
+/* 4 soorten messages, fatal, error, warning en success. */
+.fatalmessages {
+    background-color: #ff9999;
+    border: 1px solid #800000;
+}
+
+.errormessages {
+    background-color: #ff9999;
+    border: 1px solid #800000;
+}
+
+.warnmessages {
+    background-color: #FDFFBF;
+    border: 1px solid #D7DE07;
+}
+
+.successmessages {
+    background-color: #c0ffb0;
+    border: 1px solid #006400;
+}
+
+.fatalmessage {
+    color: #800000;
+}
+
+.errormessage {
+    color: #800000;
+}
+
+.warnmessage {
+    color: #b8860b;
+}
+
+.successmessage {
+    color: #006400;
+}
+
+/* Error tekst onder een input veld dat geen waarde bevat of een ongeldige waarde. */
+.fieldmessage {
+    color: #b8860b;
+    margin: 2px 0 4px;
+    font-weight: bold;
+
+    border: 1px solid #D7DE07;
+    padding: 2px 10px;
+    background-color: #FDFFBF;
+    border-left: 5px solid #D7DE07;
+
+    border-radius-topright: 5px;
+    border-radius-bottomright: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-radius-topright: 5px;
+    -webkit-border-radius-bottomright: 5px;
+
+    display: table-cell;
+}
+
+/* Required label. */
+.required span {
+    color: red;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+/* Minimale breedte voor velden, textarea's en select boxen */
+input[type=text], textarea {
+    min-width: 200px;
+}
+
+/* fix op select die altijd iets kleiner is */
+select {
+    min-width: 202px;
+}
+
+/* Bijvoorbeeld + knop naast een veld voor toevoegen nieuw veld */
+.fieldbutton {
+    vertical-align: bottom;
+}
+
+/* Velden dynamisch toegevoegd */
+.dynamicformelement {
+    margin-top: 2px;
+}
+
+/* Buttons in het algemeen */
+input.button, a.button, button {
+    line-height: 17px;
+    background-color: #307630;
+    padding: 4px 5px 4px 5px;
+    border: 1px solid #007000;
+    outline: 0;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    vertical-align: middle;
+    margin: 0 0 10px 0;
+}
+
+input.button:hover, a.button:hover, button:hover {
+    background-color: #4DB64C;
+}
+
+a.button, a.linkbutton {
+    display: inline-block;
+}
+
+/* Alternatieve button, tonen als link. */
+.linkbutton {
+    background-color: transparent;
+    text-decoration: underline;
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+    cursor: pointer;
+    font-weight: normal;
+    border: 0;
+    outline: 0;
+    color: #307630; /* Profict groen */
+}
+
+.linkbutton:hover {
+    background-color: transparent;
+}
+
+/* Firefox fix: hoogte gelijk aan a.button en button.button */
+input.button, button, a.button {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.button:focus {
+    outline: 0;
+}
+
+/* Reset button nooit tonen. */
+input[type=reset] {
+    display: none !important;
+}
+
+input[type=submit], button, a.button, a.linkbutton {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+/* Button niet standalone, maar in een tabel oid. )*/
+.inlinebutton {
+    vertical-align: bottom;
+    margin: 0 0 0 1em !important;
+}
+
+/* Buttons die alleen getoond worden als afbeelding (verwijderen, wijzigen, toevoegen enz). */
+.imgbutton {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    border: 0;
+    text-indent: -999em;
+    vertical-align: middle;
+    font-size: 0;
+}
+
+a.imgbutton {
+    display: inline-block;
+}
+
+input.imgbutton {
+    margin-top: 0;
+}
+
+/* Voor tabllen waarin buttons pas zichtbaar worden bij hover. */
+.hoverbuttons .imgbutton {
+    visibility: hidden;
+}
+
+/* 'gewone' button met afbeelding toegevoegd. */
+.imgaddedbutton {
+    background-position: 5px 50% !important;
+    padding-left: 24px !important;
+}
+
+/* Fix: afbeelding op dezelfde positie als button en input.button. */
+a.imgaddedbutton {
+    padding-left: 26px !important;
+}
+
+.button-verwijderen {
+    background: url(#{resource[ 'images:action_delete_16.png' ]} ) no-repeat;
+}
+
+.button-wijzigen {
+    background: url(#{resource[ 'images:action_edit_16.png' ]} ) no-repeat;
+}
+
+.button-toevoegen {
+    background: url(#{resource[ 'images:action_add_16.png' ]} ) no-repeat;
+}
+
+.searchbox {
+    background: url(#{resource[ 'images:action_search_16.png' ]} ) no-repeat;
+    background-position: 3px 50%;
+    background-color: white;
+    padding: 2px 0 2px 20px;
+    width: 15em;
+    min-width: 0 !important;
+    border: 1px solid #aaa;
+    margin: 12px 0 20px 0;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+/* Tekst in rood. */
+.warningtext {
+    color: red;
+    font-weight: bold;
+}
+
+/* ===================================== */
+/* Definition list - Raadplegen scherm. */
+/* ===================================== */
+
+dl {
+    display: table-cell;
+    margin: 0;
+    padding: 5px 0 0 0;
+}
+
+dt {
+    color: #4c4c4c;
+    font-size: 11px;
+    font-weight: bolder;
+    clear: left;
+    float: left;
+    width: 120px;
+    padding: 2px 5px 2px 0;
+    margin: 0;
+    text-align: left;
+}
+
+dt:after {
+    content: ": ";
+}
+
+dd {
+    float: left;
+    padding: 2px 0 2px .5em;
+    margin: 0;
+    max-width: 550px;
+}
+
+.notdecorated dd {
+    max-width: 400px;
+}
+
+/* Bij meerdere values, tonen als een lijst gescheiden door comma's */
+dd + dd:before {
+    content: ",";
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.errortekst ul {
+    margin-left: 2em;
+}
+
+/* uitgebreide omschrijving in een list */
+ul .details {
+    margin-left: 1em;
+}
+
+ul .details:before {
+    content: "- ";
+}
+
+/* ================================== */
+/* Tabellen (niet tbv opmaak!) */
+/* ================================== */
+
+table {
+    border-collapse: collapse;
+    margin: 0;
+    border: 0;
+}
+
+th {
+    padding: 0 15px 10px 0;
+    color: #888;
+    font-weight: bold;
+    text-align: left;
+}
+
+td {
+    border: 0;
+    padding: 2px 15px 2px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* De cel meest rechts geen padding rechts. */
+td:last-child {
+    padding-right: 2px;
+}
+
+tbody td {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+tbody {
+    border-top: 1px solid #f0f0f0;
+}
+
+tbody tr.alt {
+    background: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #e5ffe5;
+}
+
+tfoot tr td {
+    padding-top: 15px;
+}
+
+tfoot tr td {
+    text-align: center;
+    border-bottom: 0;
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+/* Getallen in een cel rechts uitlijnen. */
+.number {
+    font-family: Courier New, Courier, monospace;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.numberleft {
+    font-family: Courier New, Courier, monospace;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* Datum in niet proprtioneel lettertype, zodat onder elkaar uitgelijnd. */
+.date {
+    font-family: Courier New, Courier, monospace;
+    white-space: nowrap;
+}
+
+.rightalign {
+    text-align: right;
+}
+
+/* Aangevraagd kennisdomein in overzicht. */
+a.aangevraagd {
+    color: gray;
+    padding-right: 20px;
+    background-image: url(#{resource[ 'images:action_info_16.png' ]} );
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+}
+
+/* Afgekeurd kennisdomein in overzicht. */
+a.afgekeurd {
+    color: red;
+    padding-right: 20px;
+    background-image: url(#{resource[ 'images:afgekeurd_16.png' ]} );
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    text-decoration: line-through;
+}
+
+/* Een te lange omschrijving af kunnen kappen. */
+.omschrijving {
+    position: relative;
+    min-width: 200px;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+/** Een te lang kennisdomein afkappen. */
+.kennisdomein {
+    display: block;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid red;
+}
+
+/* Te lange tekst vloeiend afkappen. */
+.shader {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    background-image: url(#{resource[ 'images:cut_text.png' ]} );
+    background-position: right 0;
+    background-repeat: repeat-y;
+}
+
+/* Shader niet tonen bij hover. */
+.permahover .shader {
+    display: none;
+}
+
+/* Highlight na filteren. */
+.highlight {
+    background-color: yellow
+}
+
+/* Algemeen hidden class. */
+.hidden {
+    display: none;
+}
+
+/* Artikelen tabel. */
+#artikelen {
+    width: 100%;
+}
+
+/* Evenementen tabel. */
+#evenementen {
+    width: 100%;
+}
+
+/* ====================================== */
+/* Paginering van tabellen. */
+/* ====================================== */
+.pagelinks {
+    margin: 30px 0 15px;
+    text-align: center;
+}
+
+.pagelinks .page {
+    display: inline-block;
+    padding: 2px 10px;
+    margin: 0 2px;
+    border: 1px solid #dddddd;
+}
+
+.pagelinks a.page:hover {
+    color: white;
+    border: 1px solid #006400;
+    background-color: #4DB64C;
+}
+
+.pagelinks .current {
+    color: #444444;
+    background-color: #eeeeee;
+    border: 1px solid #bbbbbb;
+}
+
+.pagelinks .previous, .pagelinks .next {
+    padding: 2px 6px;
+    margin: 2px 22px;
+}
+
+.pagelinks span.previous, .pagelinks span.next {
+    color: #666666;
+}
+
+/* Body in een popup (iframe). */
+body.notdecorated {
+    background-color: white;
+    overflow: auto;
+    text-align: left;
+    padding: 0 25px;
+}
+
+/* Styling mbt debug messages (initieel niet tonen). */
+#javax_faces_developmentstage_messages {
+    display: none;
+    border: 2px solid red;
+    background: white;
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    right: 10%;
+    padding: 10px;
+    margin: 0;
+
+    box-shadow: 6px 6px 20px #222;
+    -moz-box-shadow: 6px 6px 20px #222;
+    -webkit-box-shadow: 6px 6px 20px #222;
+}
+
+#javax_faces_developmentstage_messages li {
+    list-style-type: none;
+}
+
+/* Cheats! */
+.width-180px {
+    width: 180px;
+}
+
+.cleaner {
+    clear: both;
+}
+
+.nowrap {
+    white-space: nowrap;
+}

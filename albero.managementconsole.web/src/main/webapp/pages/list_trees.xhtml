@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/templates/main.xhtml">
+
+	<ui:define name="content">
+		<h1>#{res['list.trees.titel']}</h1>
+		<div id="trees">
+			<h:form id="editTreeForm">
+				<h:dataTable id="treeNameDataTable"
+					value="#{treeManagedBean.treeNames}" var="name">
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="code" />
+						</f:facet>
+						<div class="edit">
+							<h:commandLink action="#{treeManagedBean.editTree}">
+							<f:setPropertyActionListener value="#{name}"
+									target="#{treeManagedBean.code}" />
+								<h:outputText value="#{name}" />
+							</h:commandLink>
+						</div>
+						<div class="delete">
+							<h:commandButton action="#{treeManagedBean.deleteTree}"
+								 value="#{res['tree.delete']}" >
+							<f:setPropertyActionListener value="#{name}"
+									target="#{treeManagedBean.code}" />
+							</h:commandButton>
+						</div>
+					</h:column>
+				</h:dataTable>
+			</h:form>
+		</div>
+		<div id="new">
+			<h:form id="newTreeForm">
+				<h:commandButton action="#{treeManagedBean.newTree}"
+					value="#{res['list.trees.new']}">
+				</h:commandButton>
+			</h:form>
+		</div>
+	</ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="#{facesContext.viewRoot.locale.language}"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:gui="http://java.sun.com/jsf/composite/components">
+
+<h:head>
+
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <meta charset="utf-8"/>
+
+    <title>#{res['applicatie.titel']} : <ui:insert name="pagetitle"/></title>
+
+    <meta name="description" content="#{res['applicatie.description']}"/>
+    <meta name="author" content="#{res['applicatie.author']}"/>
+
+    <link rel="shortcut icon" href="#{request.contextPath}/images/faviconMC.ico"/>
+
+    <!-- Enable HTML5 tags in IE. -->
+    <!--[if lt IE 9]>
+    <script src="#{request.contextPath}/resources/scripts/lib/html5-1.6.2.min.js?expires=never"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="#{request.contextPath}/css/desktop/bootstrap-1.4.0.min.css"/>
+    <link rel="stylesheet" href="#{request.contextPath}/css/desktop/style.css"/>
+
+</h:head>
+
+<h:body>
+
+    <!-- Topbar -->
+    <header class="topbar">
+        <div class="topbar-inner">
+            <div class="container">
+                <a class="brand" href="#{request.contextPath}/">#{res['applicatie.titel']}</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <section id="main">
+
+            <!-- Page content -->
+            <ui:insert name="content"/>
+
+        </section>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p class="pull-right"><a href="#">#{bundle['applicatie.action.backtotop']}</a></p>
+
+            <p>
+                <h:outputFormat value="#{res['footer.text']}" escape="false">
+                    <f:param value="#{mainController.jaartal}"/>
+                </h:outputFormat>
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript libraries onderaan de pagina inladen (om performance redenen). -->
+    <!-- Grab Google CDN's jQuery. fall back to local if necessary. -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script>!window.jQuery &amp;&amp; document.write(unescape('%3Cscript src="#{request.contextPath}/resources/scripts/lib/jquery-1.4.4.min.js?expires=never"%3E%3C/script%3E'))</script>
+
+    <!-- Overige scripts met target "body" renderen hier. -->
+    <h:outputScript library="scripts/lib" name="bootstrap-alerts-1.4.0.js" target="body"/>
+    <h:outputScript library="scripts" name="standard.js" target="body"/>
+
+</h:body>
+
+</html>
